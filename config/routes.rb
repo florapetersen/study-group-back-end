@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'current_user/index'
   resources :user_courses
   resources :notes
   resources :courses
