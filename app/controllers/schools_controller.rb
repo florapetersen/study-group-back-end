@@ -1,5 +1,6 @@
 class SchoolsController < ApplicationController
   before_action :set_school, only: [:show, :update, :destroy]
+  #before_action :authenticate_user!
 
   # GET /schools
   def index
