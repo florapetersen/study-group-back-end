@@ -6,5 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-course1 = Course.find_or_create_by(name: 'Biology 101', subject: "Biology", instructor: "Mr. Green", year: "2021")
-course2 = Course.find_or_create_by(name: 'Chemistry 200', subject: "Chemistry", instructor: "Dr. Kenley", year: "2021")
+Course.create!([{ school: "University of Washington", name: 'Biology 101', subject: "Biology", instructor: "Mr. Green", year: "2021" }, { school: "University of British Columbia", name: 'Chemistry 200', subject: "Chemistry", instructor: "Dr. Kenley", year: "2021" }])
