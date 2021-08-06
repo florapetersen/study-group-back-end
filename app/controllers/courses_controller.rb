@@ -11,7 +11,11 @@ class CoursesController < ApplicationController
 
   # GET /courses/1
   def show
-    render json: @course
+    hash = CourseSerializer.new(@course, include: [:events]).serializable_hash
+    render json: {
+      course: hash[:data][:attributes],
+      notes: hash[:included].map{|note| note[:attributes]}
+    }
   end
 
   # POST /courses
